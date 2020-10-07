@@ -2,9 +2,9 @@ package ru.netology.manager.repository;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import ru.netology.manager.TicketRepository;
 import ru.netology.manager.domain.Ticket;
 import ru.netology.manager.manager.TicketManager;
-import ru.netology.manager.repository.TicketRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -65,6 +65,6 @@ class TicketRepositoryTest {
     @Test
     void shouldFindByIdNotExisted() {
         Ticket actual = repository.findById(15);
-        assertEquals(null,actual);
+        assertEquals(null, actual);
     }
 }

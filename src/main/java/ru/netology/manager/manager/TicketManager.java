@@ -4,9 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.netology.manager.domain.Ticket;
-import ru.netology.manager.repository.TicketRepository;
+import ru.netology.manager.TicketRepository;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -18,7 +19,7 @@ public class TicketManager {
         repository.save(ticket);
     }
 
-    public Ticket[] findAll(String from, String to, TicketWithComparatorByPrice ticketWithComparatorByPrice) {
+    public Ticket[] findAll(String from, String to, Comparator<Ticket> comparator) {
         Ticket[] result = new Ticket[0];
         for (Ticket ticket : repository.getAll()) {
             int length = result.length;
@@ -30,7 +31,7 @@ public class TicketManager {
                 result = tmp;
             }
         }
-        Arrays.sort(result);
+        Arrays.sort(result, comparator);
         return result;
     }
 }

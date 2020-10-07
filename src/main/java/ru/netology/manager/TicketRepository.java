@@ -1,4 +1,4 @@
-package ru.netology.manager.repository;
+package ru.netology.manager;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
