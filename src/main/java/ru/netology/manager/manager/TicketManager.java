@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.netology.manager.domain.Ticket;
-import ru.netology.manager.domain.TicketWithComparatorByPrice;
 import ru.netology.manager.repository.TicketRepository;
 
 import java.util.Arrays;
